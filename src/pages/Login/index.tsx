@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Container } from "./styles";
 
@@ -8,11 +9,13 @@ const Login = () => {
     <Container>
       <section className="login">
         <div className="wrapper">
-          <img
-            src="assets\the_tree_logo.png"
-            alt="logo.png"
-            className="login_logo"
-          />
+          <Link to="/">
+            <img
+              src="assets\the_tree_logo.png"
+              alt="logo.png"
+              className="login_logo"
+            />
+          </Link>
 
           <h1 className="login_title">Fazer login</h1>
           {/* Create a Component Input Label */}
