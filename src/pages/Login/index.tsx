@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container } from "../styles/pages/LoginStyle";
+import { Container } from "./styles";
 
 const Login = () => {
   //Create a Function for placeholder move up in input in Input Label Component or Search for a library EX: ChakraUI, AvComponents, etc.
