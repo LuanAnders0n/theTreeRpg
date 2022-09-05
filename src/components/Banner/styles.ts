@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 840px;
-  background-image: url(${(props) => props.theme.img});
+  height: 100%;
+  max-height: 850px;
+  min-height: 500px;
   background-size: cover;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
 
   .left-text {
-    width: 45vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: absolute;
+    width: 50vw;
     padding: 10rem;
     color: #fff;
 
@@ -35,8 +38,8 @@ export const Container = styled.div`
     }
 
     .button {
-      width: 210px;
-      height: 50px;
+      width: 200px;
+      height: 45px;
       background-color: #ca0f0f;
       margin-top: 30px;
 

@@ -16,7 +16,7 @@ const Banner = (props: BannerProps) => {
   const { img, toLink, buttonText, header, principalText, footer } = props;
 
   return (
-    <Container theme={{ img: img }}>
+    <Container>
       <div className="left-text">
         {header && <h3>{header}</h3>}
         <h1>{principalText}</h1>
@@ -27,6 +27,7 @@ const Banner = (props: BannerProps) => {
           </Link>
         )}
       </div>
+      <img src={img} alt="banner" />
     </Container>
   );
 };

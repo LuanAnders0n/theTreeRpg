@@ -10,7 +10,7 @@ const Home = () => {
         img={madMageBanner}
         header="Criando Seu Personagem!"
         principalText="Crie seu personagem facilmente com sistema de escolhas!"
-        footer=" Usando o sistema de escolha é possível fazer uma criação de personagem intuitiva e interativa, com informações sobre cada classe e raça."
+        footer="Usando o sistema de escolha é possível fazer uma criação de personagem intuitiva e interativa, com informações sobre cada classe e raça."
         buttonText="Testar agora!"
         toLink="/characters"
       />

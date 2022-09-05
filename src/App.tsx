@@ -12,6 +12,8 @@ import Characters from "./pages/Characters";
 import Encounters from "./pages/Encounters";
 import Campaigns from "./pages/Campaigns";
 import BasicRules from "./pages/BasicRules";
+import { ThemeProvider } from "styled-components";
+import dark from "./styles/themes/dark";
 
 function App() {
   const location = useLocation();
@@ -20,19 +22,21 @@ function App() {
     [location]
   );
   return (
-    <>
+    <ThemeProvider theme={dark}>
       <GlobalStyle />
       {paths && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signUp" element={<SignUp />} />
-        <Route path="characters" element={<Characters />} />
-        <Route path="encounters" element={<Encounters />} />
-        <Route path="campaigns" element={<Campaigns />} />
-        <Route path="basicRules" element={<BasicRules />} />
-      </Routes>
-    </>
+      <div style={paths ? { paddingTop: 60 } : {}}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<SignUp />} />
+          <Route path="characters" element={<Characters />} />
+          <Route path="encounters" element={<Encounters />} />
+          <Route path="campaigns" element={<Campaigns />} />
+          <Route path="basicRules" element={<BasicRules />} />
+        </Routes>
+      </div>
+    </ThemeProvider>
   );
 }
 
