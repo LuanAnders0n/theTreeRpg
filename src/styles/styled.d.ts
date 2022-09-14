@@ -1,13 +1,14 @@
-import "styled-components";
+import 'styled-components'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    title: string;
+    title: string
     colors: {
-      primary: string;
-      secondary: string;
-      background: string;
-      text: string;
-    };
+      primary: string
+      secondary: string
+      background: string
+      text: string
+      card: string
+    }
   }
 }

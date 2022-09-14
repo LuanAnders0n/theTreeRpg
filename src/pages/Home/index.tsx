@@ -1,7 +1,8 @@
-import React from "react";
-import { Container } from "./styles";
-import madMageBanner from "../../images/MadMageBanner.svg";
-import Banner from "../../components/Banner";
+import React from 'react'
+import { CardGroup, Container } from './styles'
+import madMageBanner from '../../images/MadMageBanner.svg'
+import Banner from '../../components/Banner'
+import Card from '../../components/Card'
 
 const Home = () => {
   return (
@@ -9,13 +10,30 @@ const Home = () => {
       <Banner
         img={madMageBanner}
         header="Criando Seu Personagem!"
-        principalText="Crie seu personagem facilmente com sistema de escolhas!"
+        principalText="Organize sua campanha e crie novas aventuras!"
         footer="Usando o sistema de escolha é possível fazer uma criação de personagem intuitiva e interativa, com informações sobre cada classe e raça."
-        buttonText="Testar agora!"
-        toLink="/characters"
+        buttonText="Cadastre-se agora!"
+        toLink="/signUp"
       />
+      <CardGroup>
+        <Card
+          img="imagem.png"
+          tittle="Insira aqui"
+          text="Caraca olha que site maneiro mano"
+        />
+        <Card
+          img="imagem.png"
+          tittle="Insira aqui"
+          text="Caraca olha que site maneiro mano"
+        />
+        <Card
+          img="imagem.png"
+          tittle="Insira aqui"
+          text="Caraca olha que site maneiro mano"
+        />
+      </CardGroup>
     </Container>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
