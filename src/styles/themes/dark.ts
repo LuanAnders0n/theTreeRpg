@@ -1,11 +1,12 @@
-export default {
-  title: "light",
+const dark = {
+  title: "dark",
 
   colors: {
-    primary: "#0b0014",
+    primary: "#110B16",
     secondary: "#ca0f0f",
 
     background: "#414141",
     text: "#ffffff",
   },
-};
+}
+export default dark;
