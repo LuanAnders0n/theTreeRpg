@@ -9,17 +9,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #fff;
+    background: ${(props) => props.theme.colors.background};
     -webkit-font-smoothing: antialiased;
-    color: #808080;
+    color: ${(props) => props.theme.colors.text};
   }
   
   body, input, button {
-    font: 500 16px 'Poppins', sans-serif;
-  }
-  
-  strong, h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font: 400 16px 'Poppins', sans-serif;
   }
 
   h1 {
