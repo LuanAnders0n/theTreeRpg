@@ -12,18 +12,22 @@ export const Container = styled.div`
   }
 
   &:hover {
-    animation: float 2.5s infinite;
+    animation: float 2s ease-in-out infinite;
     cursor: pointer;
-    @keyframes float {
-      0%,
-      100% {
-        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-      }
-      50% {
-        box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.4);
-        transform: translatey(-20px);
-      }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
     }
+    50% {
+      box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.4);
+      transform: translatey(-20px);
+    }
+  }
+  img {
+    width: 50px;
+    height: 50px;
   }
 `

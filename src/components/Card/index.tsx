@@ -2,9 +2,9 @@ import React from 'react'
 import { Container } from './styles'
 
 interface CardProps {
-  img: string
-  tittle: string
-  text: string
+  img?: any
+  tittle?: string
+  text?: string
 }
 
 const Card = (props: CardProps) => {
@@ -15,7 +15,7 @@ const Card = (props: CardProps) => {
       <div>
         <img src={img} alt="cardLogo.png" />
         <h1>{tittle}</h1>
-        <p>{text}</p>
+        {text && <p>{text}</p>}
       </div>
     </Container>
   )
