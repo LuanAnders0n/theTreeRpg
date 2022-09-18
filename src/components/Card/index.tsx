@@ -2,8 +2,8 @@ import React from 'react'
 import { Container } from './styles'
 
 interface CardProps {
-  img?: any
-  tittle?: string
+  img: any
+  tittle: string
   text?: string
 }
 
