@@ -1,8 +1,8 @@
-import React from 'react'
-import { CardGroup, Container } from './styles'
-import madMageBanner from '../../images/MadMageBanner.svg'
-import Banner from '../../components/Banner'
-import Card from '../../components/Card'
+import React from 'react';
+import { CardGroup, Container } from './styles';
+import madMageBanner from '../../images/MadMageBanner.svg';
+import Banner from '../../components/Banner';
+import Card from '../../components/Card';
 
 const Home = () => {
   return (
@@ -18,22 +18,22 @@ const Home = () => {
       <CardGroup>
         <Card
           img="imagem.png"
-          tittle="Insira aqui"
+          title="Insira aqui"
           text="Caraca olha que site maneiro mano"
         />
         <Card
           img="imagem.png"
-          tittle="Insira aqui"
+          title="Insira aqui"
           text="Caraca olha que site maneiro mano"
         />
         <Card
           img="imagem.png"
-          tittle="Insira aqui"
+          title="Insira aqui"
           text="Caraca olha que site maneiro mano"
         />
       </CardGroup>
     </Container>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
