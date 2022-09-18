@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Container } from "./styles";
+import { Container } from './styles'
 
 const Login = () => {
   //Create a Function for placeholder move up in input in Input Label Component or Search for a library EX: ChakraUI, AvComponents, etc.
@@ -66,7 +66,7 @@ const Login = () => {
       </section>
       <section className="wallpaper" />
     </Container>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
