@@ -8,5 +8,5 @@ export const CardGroup = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 75px;
+  margin: 75px 0;
 `
