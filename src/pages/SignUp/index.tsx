@@ -1,83 +1,93 @@
-<<<<<<< Updated upstream
-import React from "react";
+import React from 'react';
+import { Formik, Field, Form, FormikHelpers } from 'formik';
 
-// import { Container } from './styles';
-
-const SignUp = () => {
-  return <div />;
-};
-
-export default SignUp;
-=======
-import React from 'react'
-import { Formik, Field, Form, FormikHelpers } from 'formik'
-
-import { Container } from './styles'
+import { Container, StyledForm } from './styles';
+import Grid from '@mui/material/Unstable_Grid2/Grid2';
 
 interface Values {
-  avatar: any
-  firstName: string
-  lastName: string
-  birthday: string
-  nickname: string
-  email: string
-  password: string
+  avatar: any;
+  firstName: string;
+  lastName: string;
+  nickname: string;
+  email: string;
+  password: string;
 }
 
 const SignUp = () => {
   return (
     <Container>
-      <div className="body">
+      <div className="image" />
+      <StyledForm>
         <h1>Signup</h1>
         <Formik
           initialValues={{
             avatar: '',
             firstName: '',
             lastName: '',
-            birthday: '',
             nickname: '',
             email: '',
-            password: ''
+            password: '',
           }}
           onSubmit={(
             values: Values,
             { setSubmitting }: FormikHelpers<Values>
           ) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2))
-              setSubmitting(false)
-            }, 500)
+              alert(JSON.stringify(values, null, 2));
+              setSubmitting(false);
+            }, 500);
           }}
         >
           <Form>
-            <label htmlFor="firstName">Avatar</label>
-            <Field class="avatar" name="avatar" type="file" accept="image/*" />
+            <Grid container>
+              <Grid xs={12}>
+                <label htmlFor="firstName">Avatar</label>
+                <Field id="avatar" name="avatar" type="file" accept="image/*" />
+              </Grid>
 
-            <label htmlFor="firstName">Primeiro nome</label>
-            <Field class="firstName" name="firstName" />
+              <Grid xs={6}>
+                <label htmlFor="firstName">Primeiro nome</label>
+                <Field id="firstName" name="firstName" />
+              </Grid>
 
-            <label htmlFor="lastName">Ultimo nome</label>
-            <Field class="lastName" name="lastName" />
+              <Grid xs={6}>
+                <label htmlFor="lastName">Ultimo nome</label>
+                <Field id="lastName" name="lastName" />
+              </Grid>
 
-            <label htmlFor="nickname">Aniversario</label>
-            <Field class="date" name="date" type="date" />
+              <Grid xs={12}>
+                <label htmlFor="nickname">Nickname</label>
+                <Field id="nickname" name="nickname" />
+              </Grid>
 
-            <label htmlFor="nickname">Nickname</label>
-            <Field class="nickname" name="nickname" />
+              <Grid xs={12}>
+                <label htmlFor="email">Email</label>
+                <Field id="email" name="email" type="email" />
+              </Grid>
 
-            <label htmlFor="email">Email</label>
-            <Field class="email" name="email" type="email" />
+              <Grid xs={12}>
+                <label htmlFor="password">Password</label>
+                <Field id="password" name="password" type="password" />
+              </Grid>
 
-            <label htmlFor="password">Password</label>
-            <Field class="password" name="password" type="password" />
+              <Grid xs={12}>
+                <label htmlFor="password">Confirm Password</label>
+                <Field
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                />
+              </Grid>
 
-            <button type="submit">Submit</button>
+              <Grid xs={12}>
+                <button type="submit">Submit</button>
+              </Grid>
+            </Grid>
           </Form>
         </Formik>
-      </div>
+      </StyledForm>
     </Container>
-  )
-}
+  );
+};
 
-export default SignUp
->>>>>>> Stashed changes
+export default SignUp;

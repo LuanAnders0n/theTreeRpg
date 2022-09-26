@@ -1,15 +1,13 @@
-import styled from "styled-components";
-import img from "../../images/background_login.gif";
+import styled from 'styled-components';
+import img from '../../images/background_login.gif';
 
-const primary = "#ED7D3A";
-const whiteSmoke = "#f9f9f9";
-const lightGrey = "#ececec";
-const grey = "#c4c4c4";
-const mediumGrey = "#a7a7a7";
-const deepGrey = "#343434";
-const black = "#000000";
-const blue = "#1b77f3";
-const red = "#cf3c3f";
+const primary = '#ED7D3A';
+const whiteSmoke = '#f9f9f9';
+const lightGrey = '#ececec';
+const mediumGrey = '#a7a7a7';
+const deepGrey = '#343434';
+const black = '#000000';
+const blue = '#1b77f3';
 
 export const Container = styled.div`
   display: flex;
@@ -140,7 +138,7 @@ export const Container = styled.div`
   }
 
   .input--checkbox:checked::after {
-    content: "";
+    content: '';
     display: block;
     width: 5px;
     height: 10px;

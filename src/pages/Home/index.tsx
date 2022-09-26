@@ -14,6 +14,7 @@ const Home = () => {
         footer="Usando o sistema de escolha é possível fazer uma criação de personagem intuitiva e interativa, com informações sobre cada classe e raça."
         buttonText="Cadastre-se agora!"
         toLink="/signUp"
+        shadow
       />
       <CardGroup>
         <Card

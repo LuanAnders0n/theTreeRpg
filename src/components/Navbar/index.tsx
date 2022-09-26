@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../images/the_tree_logo.png'
+import logo from '../../images/the_tree_logo.svg'
 
 import { Container } from './styles'
 

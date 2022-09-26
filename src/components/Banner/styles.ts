@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100%;
@@ -7,6 +7,14 @@ export const Container = styled.div`
   background-size: cover;
   display: flex;
   align-items: center;
+
+  .shadow {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #15151e 10%, rgba(21, 21, 30, 0) 100%);
+  }
 
   img {
     width: 100%;
@@ -17,10 +25,11 @@ export const Container = styled.div`
     width: 50vw;
     padding: 10rem;
     color: #fff;
+    z-index: 99;
 
     h3 {
-      font: 500 20px "Poppins", sans-serif;
-      color: #ca0f0f;
+      font: 500 20px 'Poppins', sans-serif;
+      color: ${(props) => props.theme.colors.secondary};
       padding-bottom: 15px;
     }
 
@@ -40,7 +49,7 @@ export const Container = styled.div`
     .button {
       width: 200px;
       height: 45px;
-      background-color: #ca0f0f;
+      background-color: ${(props) => props.theme.colors.secondary};
       margin-top: 30px;
 
       display: flex;

@@ -1,19 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Container } from './styles'
+import { Container } from './styles';
 
 interface BannerProps {
-  img: any
-  toLink?: string
-  buttonText?: string
-  header?: string
-  principalText: string
-  footer?: string
+  img: any;
+  shadow?: boolean;
+  toLink?: string;
+  buttonText?: string;
+  header?: string;
+  principalText: string;
+  footer?: string;
 }
 
 const Banner = (props: BannerProps) => {
-  const { img, toLink, buttonText, header, principalText, footer } = props
+  const { img, toLink, buttonText, header, principalText, footer, shadow } =
+    props;
 
   return (
     <Container>
@@ -27,9 +29,10 @@ const Banner = (props: BannerProps) => {
           </Link>
         )}
       </div>
+      {shadow && <div className="shadow" />}
       <img src={img} alt="banner" />
     </Container>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

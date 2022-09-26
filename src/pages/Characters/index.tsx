@@ -1,26 +1,14 @@
-<<<<<<< Updated upstream
-import React from "react";
+import React from 'react';
+import Table from '../../components/Table';
 
-// import { Container } from './styles';
-
-const Characters = () => {
-  return <div />;
-};
-
-export default Characters;
-=======
-import React from 'react'
-import Table from '../../components/Table'
-
-import { Tables, Container } from './styles'
+import { Container } from './styles';
 
 const Characters = () => {
   return (
-    <Tables>
-      <Table></Table>
-    </Tables>
-  )
-}
+    <Container>
+      <Table />
+    </Container>
+  );
+};
 
-export default Characters
->>>>>>> Stashed changes
+export default Characters;

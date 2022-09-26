@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 350px;
   height: 400px;
   border-radius: 25px;
-  background: ${props => props.theme.colors.card};
+  background: ${(props) => props.theme.colors.card};
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
 
   div {
@@ -31,4 +31,4 @@ export const Container = styled.div`
     width: 50px;
     height: 50px;
   }
-`
+`;
