@@ -1,90 +1,110 @@
 import React from 'react';
-import { Formik, Field, Form, FormikHelpers } from 'formik';
-
 import { Container } from './styles';
-import Grid from '@mui/material/Unstable_Grid2/Grid2';
-
-interface Values {
-  avatar: any;
-  firstName: string;
-  lastName: string;
-  nickname: string;
-  email: string;
-  password: string;
-}
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
+import Showpassword from '../../components/Showpassword';
+import Confirmpassword from '../../components/Confirmpassword';
+import Tasha from '../../images/Tasha.png';
+import logo from '../../images/the_tree_logo.svg';
+import Facebook from 'react-facebook-login';
+import { GoogleLogin } from 'react-google-login';
 
 const SignUp = () => {
-  const initialValues: Values = {
-    avatar: '',
-    firstName: '',
-    lastName: '',
-    nickname: '',
-    email: '',
-    password: '',
-  };
-
-  const onSubmit = (
-    values: Values,
-    { setSubmitting }: FormikHelpers<Values>
-  ) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 500);
+  const callBackLogin = (response: any) => {
+    console.log(response);
   };
 
   return (
     <Container>
-      <div className="image" />
-      <Formik initialValues={initialValues} onSubmit={onSubmit}>
-        <Form className="form">
-            <h1>Signup</h1>
+      <div className="singUp">
+        <div>
+          <img
+            className="logo"
+            src={logo}
+            alt="logo.png"
+            width={250}
+            height={80}
+          />
+
+          <h2>Começe agora</h2>
+          <h1 className="createAccount">Crie sua conta</h1>
+          <h3>
+            Já é membro? faça seu <a href="/login">log in</a>
+          </h3>
+
+          <GoogleLogin
+            clientId="137219769033-vplk0d5etrp3vnlbv1rjes669ev8vo5m.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={callBackLogin}
+            onFailure={callBackLogin}
+          />
+          <Facebook
+            appId="775582386868703"
+            autoLoad={true}
+            fields="name,email,picture"
+            callback={callBackLogin}
+          />
+        </div>
+
+        <p>ou</p>
+
+        <Box
+          component="form"
+          noValidate
+          autoComplete="off"
+          sx={{ flexGrow: 1 }}
+        >
           <Grid container spacing={2}>
-            <Grid xs={12}>
-              <label htmlFor="firstName">Avatar</label>
-              <Field id="avatar" name="avatar" type="file" accept="image/*" />
-            </Grid>
-
             <Grid xs={6}>
-              <label htmlFor="firstName">Primeiro nome</label>
-              <Field id="firstName" name="firstName" />
-            </Grid>
-
-            <Grid xs={6}>
-              <label htmlFor="lastName">Ultimo nome</label>
-              <Field id="lastName" name="lastName" />
-            </Grid>
-
-            <Grid xs={12}>
-              <label htmlFor="nickname">Nickname</label>
-              <Field id="nickname" name="nickname" />
-            </Grid>
-
-            <Grid xs={12}>
-              <label htmlFor="email">Email</label>
-              <Field id="email" name="email" type="email" />
-            </Grid>
-
-            <Grid xs={12}>
-              <label htmlFor="password">Password</label>
-              <Field id="password" name="password" type="password" />
-            </Grid>
-
-            <Grid xs={12}>
-              <label htmlFor="password">Confirm Password</label>
-              <Field
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
+              <TextField
+                fullWidth
+                id="firstName"
+                label="First Name"
+                variant="filled"
               />
             </Grid>
-
+            <Grid xs={6}>
+              <TextField
+                fullWidth
+                id="lastName"
+                label="Last Name"
+                variant="filled"
+              />
+            </Grid>
             <Grid xs={12}>
-              <button type="submit">Submit</button>
+              <TextField
+                fullWidth
+                id="nickname"
+                label="Nickname"
+                variant="filled"
+              />
+            </Grid>
+            <Grid xs={12}>
+              <TextField
+                fullWidth
+                id="email"
+                label="E-mail"
+                variant="filled"
+                type="email"
+              />
+            </Grid>
+            <Grid xs={12}>
+              <Showpassword></Showpassword>
+            </Grid>
+            <Grid xs={12}>
+              <Confirmpassword></Confirmpassword>
             </Grid>
           </Grid>
-        </Form>
-      </Formik>
+          <Button variant="contained" type="submit" color="success">
+            Register
+          </Button>
+        </Box>
+      </div>
+      <div className="gradient"></div>
+      <img className="tasha" src={Tasha} alt="" />
+      <div className="line"></div>
     </Container>
   );
 };

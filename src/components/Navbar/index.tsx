@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../../images/the_tree_logo.svg'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../images/the_tree_logo.svg';
 
-import { Container } from './styles'
+import { Container } from './styles';
 
 const Navbar: React.FC = () => {
   return (
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
